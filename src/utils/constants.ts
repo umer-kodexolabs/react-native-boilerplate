@@ -1,0 +1,13 @@
+const MODAL_TYPES = {
+  // Confirmation Modals
+  CONFIRM_DELETE: 'CONFIRM_DELETE',
+  CONFIRM_LOGOUT: 'CONFIRM_LOGOUT',
+  CONFIRM_SAVE_CHANGES: 'CONFIRM_SAVE_CHANGES',
+
+  // Authentication Modals
+  LOGIN: 'LOGIN',
+  REGISTER: 'REGISTER',
+  RESET_PASSWORD: 'RESET_PASSWORD',
+} as const;
+
+export { MODAL_TYPES };
