@@ -1,41 +1,42 @@
-// import {MODAL_TYPES} from '@/utils';
-// import {create} from 'zustand';
+import { create } from 'zustand';
 
-// const {CREATE_GOAL, FEATURE_UNAVAILABLE, UPLOAD_WORKPLACE_FILES} = MODAL_TYPES;
+import { MODAL_TYPES } from '@/utils';
 
-// type ModalStateVariables = {
-//   type:
-//     | typeof CREATE_GOAL
-//     | typeof FEATURE_UNAVAILABLE
-//     | typeof UPLOAD_WORKPLACE_FILES;
-//   props?: any;
-// };
+const { CONFIRM_DELETE, CONFIRM_LOGOUT, CONFIRM_SAVE_CHANGES } = MODAL_TYPES;
 
-// type State = {
-//   currentModal?: ModalStateVariables['type'];
-//   modalProps?: ModalStateVariables['props'];
-// };
+type ModalStateVariables = {
+  type:
+    | typeof CONFIRM_DELETE
+    | typeof CONFIRM_LOGOUT
+    | typeof CONFIRM_SAVE_CHANGES;
+  props?: any;
+};
 
-// type Actions = {
-//   openModal: (data: ModalStateVariables) => void;
-//   closeModal: () => void;
-// };
+type State = {
+  currentModal?: ModalStateVariables['type'];
+  modalProps?: ModalStateVariables['props'];
+};
 
-// const useModalStore = create<State & Actions>(set => ({
-//   currentModal: undefined,
-//   modalProps: undefined,
+type Actions = {
+  openModal: (data: ModalStateVariables) => void;
+  closeModal: () => void;
+};
 
-//   closeModal: () =>
-//     set({
-//       currentModal: undefined,
-//       modalProps: undefined,
-//     }),
-//   openModal: data =>
-//     set({
-//       currentModal: data.type,
-//       modalProps: data.props,
-//     }),
-// }));
+const useModalStore = create<State & Actions>((set) => ({
+  currentModal: undefined,
+  modalProps: undefined,
 
-// export type {ModalStateVariables};
-// export {useModalStore};
+  closeModal: () =>
+    set({
+      currentModal: undefined,
+      modalProps: undefined,
+    }),
+  openModal: (data) =>
+    set({
+      currentModal: data.type,
+      modalProps: data.props,
+    }),
+}));
+
+export type { ModalStateVariables };
+export { useModalStore };
