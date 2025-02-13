@@ -5,6 +5,7 @@ import {
   View,
   TextStyle,
   ViewStyle,
+  TextInput,
 } from 'react-native';
 import {createButtonStyles} from './styles';
 import {Colors} from '@constants';
