@@ -10,4 +10,4 @@ const MODAL_TYPES = {
   RESET_PASSWORD: 'RESET_PASSWORD',
 } as const;
 
-export { MODAL_TYPES };
+export {MODAL_TYPES};

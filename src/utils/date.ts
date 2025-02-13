@@ -1,4 +1,4 @@
-import { isToday, isYesterday, format } from 'date-fns';
+import {isToday, isYesterday, format} from 'date-fns';
 
 const formatDateLabel = (date: string) => {
   if (isToday(date)) {
@@ -17,4 +17,4 @@ const extractTime = (timestamp: string) => {
   return format(date, 'h:mm a');
 };
 
-export { formatDateLabel, extractTime };
+export {formatDateLabel, extractTime};

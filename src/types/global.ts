@@ -10,7 +10,7 @@ type MongoObjectId = {
 type MongoDate = {
   $date: string;
 };
-type ErrorResponse = { success: boolean; message: string };
+type ErrorResponse = {success: boolean; message: string};
 
 interface SuccessResponse<T> {
   status_code: number;

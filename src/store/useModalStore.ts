@@ -1,8 +1,8 @@
-import { create } from 'zustand';
+import {create} from 'zustand';
 
-import { MODAL_TYPES } from '@/utils';
+import {MODAL_TYPES} from '@/utils';
 
-const { CONFIRM_DELETE, CONFIRM_LOGOUT, CONFIRM_SAVE_CHANGES } = MODAL_TYPES;
+const {CONFIRM_DELETE, CONFIRM_LOGOUT, CONFIRM_SAVE_CHANGES} = MODAL_TYPES;
 
 type ModalStateVariables = {
   type:
@@ -22,7 +22,7 @@ type Actions = {
   closeModal: () => void;
 };
 
-const useModalStore = create<State & Actions>((set) => ({
+const useModalStore = create<State & Actions>(set => ({
   currentModal: undefined,
   modalProps: undefined,
 
@@ -31,12 +31,12 @@ const useModalStore = create<State & Actions>((set) => ({
       currentModal: undefined,
       modalProps: undefined,
     }),
-  openModal: (data) =>
+  openModal: data =>
     set({
       currentModal: data.type,
       modalProps: data.props,
     }),
 }));
 
-export type { ModalStateVariables };
-export { useModalStore };
+export type {ModalStateVariables};
+export {useModalStore};

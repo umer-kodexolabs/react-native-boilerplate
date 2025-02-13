@@ -1,6 +1,6 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
-  "compilerOptions": {
+    "compilerOptions": {
     "strict": true,
     "removeComments": true,
     "strictNullChecks": true,
@@ -8,23 +8,22 @@
     "noEmit": true,
     "strictFunctionTypes": true,
 
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*", "./assets/*"],
-      "@components": ["./components/common/index.ts"],
-      "@components/*": ["./src/components/*"],
-      "@screens/*": ["./src/screens/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@constants/*": ["./src/constants/*"],
+      "@/*": ["./src/*"], 
+      "@components/common/*": ["src/components/common"],
+      "@components/*": ["src/components/*"],
+      "@screens/*": ["src/screens/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@constants": ["src/constants"],
       "@services/*": ["./src/services/*"],
       "@validations": ["./validations/index.ts"],
       "@types": ["./types/index.ts"],
       "@navigation/*": ["./src/navigation/*"],
       "@styles/*": ["./src/styles/*"],
-      "@icons": ["./components/Icon/index.ts"]
+      "@icons": ["src/components/Icon"],
     }
   },
   "exclude": ["./android/**/*", "./ios/**/*", "./node_modules/**/*"],
-  "include": ["**/*.ts", "**/*.tsx"]
 }

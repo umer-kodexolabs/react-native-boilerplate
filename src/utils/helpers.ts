@@ -9,7 +9,7 @@ const truncateText = (text: string, maxLength: number) => {
 const capitalizeFirstChar = (text: string): string => {
   if (!text) return text;
 
-  return text.replace(/^./, (char) => char.toUpperCase());
+  return text.replace(/^./, char => char.toUpperCase());
 };
 
-export { truncateText, capitalizeFirstChar };
+export {truncateText, capitalizeFirstChar};
