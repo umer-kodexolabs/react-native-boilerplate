@@ -12,6 +12,12 @@
     "format": "prettier --write .",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+   "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
